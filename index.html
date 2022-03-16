@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/collapse.css" />
+    <script src="js/menuamagar.js"></script>
+    <style></style>
+  </head>
+  <!-- 
+  Datos de acceso
+Para visualizar la página deberá introducir los siguientes datos:
+
+Usuario:
+curric230
+Contraseña:
+fT7DmoC8 -->
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- linea del titol -->
+        <div class="col-12 titol">GUILLEM VENTURA CAPELLA</div>
+
+        <!-- menus boto per navegar entre seccions  -->
+        <div class="col-2 menu">
+          <div class="row boto">
+            <button class="bo2" onclick="cambio1()">Quí sòc?</button>
+          </div>
+          <div class="row boto">
+            <button class="bo2" onclick="cambio2()">
+              Carrera estudiantil i professional
+            </button>
+          </div>
+          <div class="row boto">
+            <button class="bo2" onclick="cambio3()">Dades personals</button>
+          </div>
+          <div class="row boto">
+            <button class="bo2" onclick="cambio4()">Aptituds</button>
+          </div>
+        </div>
+        <!-- fi del menus boto -->
+
+        <!-- foto de perfil  -->
+        <div class="col-2 fperfil"></div>
+        <!-- fi foto de perfil  -->
+        <!-- primera seccio  -->
+        <div class="col-8 primer" id="primer">
+          <p>
+            Sóc una persona curiosa i activa però tranquil·la. No m'importa
+            treballar sota pressió sempre que sigui de forma organitzada i amb
+            un bon equip. Prefereixo treballar amb companyia ja que fa més
+            satisfactori compartir els objectius complerts i és més senzill
+            superar els obstacles que sorgeixin. Crec en l'amabilitat i que les
+            fites més gratificants són les que s'hi dedica més esforç.
+          </p>
+          <p>
+            Des de que tinc consciència poseeixo i utilitzo un ordinador. No
+            obstant, fa ben poc que trastejo amb llenguatges de programació,
+            però em generen gran interès ja que crec que son una habilitat i
+            eina indispensable en l'actualitat, i són realment divertits
+            d'utilitzar i fer funcionar.
+          </p>
+          <p>
+            En el meu temps lliure m'agrada llegir noveles, jugar a videojocs i
+            crear móns fantàstics per tal de desarrollarlos i jugar en sessions
+            de rol.
+          </p>
+        </div>
+        <!-- fi primera secció -->
+
+        <!-- segona seccio  -->
+        <div class="col-8 segon hidden" id="segon">
+          <h3>Estudis</h3>
+          <p>
+            Disseny i Desenvolupament de pàgines web <br />CIFO Salt.<br />
+            Des. 2021. Girona
+          </p>
+          <p>
+            Escola Oficial d'idiomes Girona<br />
+            Anglés C1<br />
+            2015
+          </p>
+          <p>
+            Batxillerat humanístic<br />
+            IES Jaume Vicens Vives<br />
+            2013
+          </p>
+          <h3>Llocs de treball</h3>
+          <p>
+            Cambrer a Grup Boira Bars & Restaurants <br />
+            2015-2020
+          </p>
+          <p>
+            Camber a Restaurant Gran Muralla <br />
+            2014
+          </p>
+        </div>
+        <!-- fi segona seccio -->
+
+        <!-- tercera seccio  -->
+        <div class="col-8 tercer hidden" id="tercer">
+          <p><strong>Data de naixement</strong> 05/06/1995</p>
+          <p><strong>Lloc de residencia:</strong> Girona</p>
+          <p>
+            <strong>Tlf:</strong>
+            <a class="tlf" href="tel:+34617902022">617902022</a>
+          </p>
+          <p>
+            <strong>E-mail:</strong>
+            <a class="tlf" href="mailto:gventu005@gmail.com"
+              >gventu005@gmail.com</a
+            >
+          </p>
+          <p><strong></strong></p>
+        </div>
+        <!-- fi tercera seccio  -->
+        <!-- inici quarta seccio  -->
+        <div class="col-8 quart hidden" id="quart">
+          <p>Aptituds i coneixements</p>
+          <button type="button" class="collapsible">Idiomes</button>
+          <div class="content">
+            <p><strong>Català:</strong> Matern</p>
+            <p><strong>Castellà:</strong> Alt</p>
+            <p><strong>Anglès:</strong> Alt</p>
+            <p><strong>Rús:</strong> Iniciat</p>
+          </div>
+
+          <button type="button" class="collapsible">Informàtica</button>
+          <div class="content">
+            <p>Figma</p>
+            <p>Wordpress</p>
+            <p>Html</p>
+            <p>CSS</p>
+            <p>Bootstrap</p>
+            <p>Javascript</p>
+            <p>Ofimàtica</p>
+            <p>Xarxes socials</p>
+          </div>
+          <button type="button" class="collapsible">Permís de conduir</button>
+          <div class="content">
+            <p>Carnet B</p>
+            <p>Disponibilitat de vehicle propi</p>
+          </div>
+
+          <!-- fi quarta seccio  -->
+        </div>
+      </div>
+    </div>
+
+    <!-- script del collapse que no se perque no em funcionava en un doc extern i l'he posat aqui  -->
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

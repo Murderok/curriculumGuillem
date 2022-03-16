@@ -1,0 +1,46 @@
+*{background-color: black;}
+/* funcio per navegar entre menus que utilitzara el js */
+.hidden {
+    display: none;
+  }
+  /* css basic per al document
+   */
+   /* css del titol */
+.titol { display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; 
+    color: white;
+    align-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 32px;
+
+}
+
+/* css del menu  */
+  .menu{ display: flex;
+    flex-direction: column;
+    align-content: space-between;
+
+}
+.boto{
+padding: 10px;
+}
+.bo2{background-color: antiquewhite;
+  color: black;
+  border: 1px solid rgb(43, 23, 226);
+  height: 50px;
+  border-radius: 20px;
+    }
+    
+/* css dels p */
+p{color: white;}
+h3 {color: red}
+/* css link de la foto de perfil i les decoracions de text  */
+.fperfil{ background: url(../img/bolanio.png);
+background-repeat: no-repeat;
+height:450px;}
+.tlf{ text-decoration: none; 
+}
+
+
